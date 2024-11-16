@@ -1,8 +1,8 @@
 package basic
 
 import (
-	"my-protobuf/protogen/basic"
 	"log"
+	"my-protobuf/protogen/basic"
 )
 
 func BasicUser() {
@@ -11,6 +11,8 @@ func BasicUser() {
 		Username: "superman",
 		IsActive: true,
 		Password: []byte("supermanpassword"),
+		Email: 	  []string{"superman@movie.com", "superman@dc.com"},
+		Gender: basic.Gender_GENDER_MALE,
 	}
 
 	log.Println(&h)
