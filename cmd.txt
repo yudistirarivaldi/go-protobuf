@@ -1,0 +1,6 @@
+// generate file protoc
+protoc --go_opt=module=my-protobuf --go_out=. ./proto/basic/*.proto
+
+// must be run
+go mod tidy
+go mod vendor
