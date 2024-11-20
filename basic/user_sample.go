@@ -13,6 +13,10 @@ func BasicUser() {
 		Street: "Jl Haji Noin",
 		City: "Jakarta",
 		Country: "Indonesia",
+		Coordinate: &basic.Address_Coordinate{
+			Latitude: 40.70129319,
+			Longitude: -92.02302030,
+		},
 	}
 
 	h := basic.User{
