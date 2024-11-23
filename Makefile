@@ -21,7 +21,9 @@ endif
 # (un)comment or add folder that contains proto as required
 protoc:
 	protoc --go_opt=module=${GO_MODULE} --go_out=. \
-		./proto/basic/*.proto
+		./proto/basic/*.proto \
+		./proto/dummy/*.proto \
+		./proto/jobsearch/*.proto \
 
 .PHONY: build
 build: clean protoc tidy
