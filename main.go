@@ -21,10 +21,11 @@ func main() {
 	// basic.BasicUser()
 	// basic.BasicUnmarshalAnyKnown()
 	// basic.BasicUnmarshalAnyNotKnown()
-	basic.BasicUnmarshalAnyIs()
+	// basic.BasicUnmarshalAnyIs()
 	// basic.ProtoToJsonUser()
 	// basic.JsonToProtoUser()
 	// basic.BasicUserGroup()
+	basic.BasicOneOf()
 	// jobsearch.JobSearchCancdidate()
 	// jobsearch.JobSearchCancdidate()
 }
