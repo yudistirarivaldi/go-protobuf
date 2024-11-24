@@ -5,11 +5,26 @@ import (
 	"log"
 	"my-protobuf/protogen/basic"
 
+	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
 
 func WriteProtoToFile(msg proto.Message, fname string) {
 	b, err := proto.Marshal(msg)
+	if err != nil {
+		log.Fatalln("Can not marshal message", err)
+	}
+
+	err = ioutil.WriteFile(fname, b, 0644)
+	if err != nil {
+		log.Fatalln("Can not write to file", err)
+	}
+
+
+}
+
+func WriteProtoToJSON(msg proto.Message, fname string) {
+	b, err := protojson.Marshal(msg)
 	if err != nil {
 		log.Fatalln("Can not marshal message", err)
 	}
@@ -29,6 +44,19 @@ func ReadProtoFromFile(fname string, dest proto.Message) {
 	}
 
 	err = proto.Unmarshal(in, dest)
+	if err != nil {
+		log.Fatalln("Can not unmarshal", err)
+	}
+
+}
+
+func ReadProtoFromJSON(fname string, dest proto.Message) {
+	in, err := ioutil.ReadFile(fname)
+	if err != nil {
+		log.Fatalln("Can not read file", err)
+	}
+
+	err = protojson.Unmarshal(in, dest)
 	if err != nil {
 		log.Fatalln("Can not unmarshal", err)
 	}
@@ -70,10 +98,24 @@ func WriteToFileSample() {
 	WriteProtoToFile(&u, "superman_file.bin")
 }
 
+func WriteToJSONSample() {
+	u := dummyUser()
+	WriteProtoToJSON(&u, "superman_file.json")
+}
+
+
 func ReadFromFileSample() {
 	dest := basic.User{}
 
 	ReadProtoFromFile("superman_file.bin", &dest)
+
+	log.Println(&dest)
+}
+
+func ReadFromJSONSample() {
+	dest := basic.User{}
+
+	ReadProtoFromJSON("superman_file.json", &dest)
 
 	log.Println(&dest)
 }

@@ -1,0 +1,18 @@
+{
+  "id": 99,
+  "username": "superman",
+  "is_active": true,
+  "password": "cGFzc3dvcmQ=",
+  "address": {
+    "street": "Daily Planet",
+    "city": "Metropolis",
+    "country": "US",
+    "coordinate": { "latitude": 40.12312, "longitude": -74.828193 }
+  },
+  "communication_channel": {
+    "@type": "type.googleapis.com/SocialMedia",
+    "social_media_platform": "instagram",
+    "social_media_username": "ydstrarvldiii"
+  },
+  "skill_rating": { "durability": 5, "fly": 5, "speed": 5 }
+}
