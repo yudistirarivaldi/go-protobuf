@@ -18,7 +18,9 @@ func main() {
 	log.SetOutput(new(logWriter))
 
 	// basic.BasicHello()
-	basic.BasicUser()
+	// basic.BasicUser()
+	// basic.WriteToFileSample()
+	basic.ReadFromFileSample()
 	// basic.BasicUnmarshalAnyKnown()
 	// basic.BasicUnmarshalAnyNotKnown()
 	// basic.BasicUnmarshalAnyIs()
