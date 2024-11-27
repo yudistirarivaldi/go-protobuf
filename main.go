@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"my-protobuf/basic"
+	"my-protobuf/car"
 	"time"
 )
 
@@ -18,7 +18,7 @@ func main() {
 	log.SetOutput(new(logWriter))
 
 	// basic.BasicHello()
-	basic.BasicUser()
+	// basic.BasicUser()
 	// basic.WriteToFileSample()
 	// basic.ReadFromFileSample()
 	// basic.WriteToJSONSample()
@@ -40,4 +40,5 @@ func main() {
 	// basic.BasicReadUserContentV3()
 	// basic.BasicWriteUserContentV4()
 	// basic.BasicReadUserContentV4()
+	car.ValidateCar()
 }
