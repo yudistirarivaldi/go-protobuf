@@ -1,3 +1,7 @@
+# google.golang.org/genproto v0.0.0-20241118233622-e639e219e697
+## explicit; go 1.21
+google.golang.org/genproto/googleapis/type/date
+google.golang.org/genproto/googleapis/type/latlng
 # google.golang.org/protobuf v1.35.2
 ## explicit; go 1.21
 google.golang.org/protobuf/encoding/protojson
@@ -29,3 +33,4 @@ google.golang.org/protobuf/reflect/protoregistry
 google.golang.org/protobuf/runtime/protoiface
 google.golang.org/protobuf/runtime/protoimpl
 google.golang.org/protobuf/types/known/anypb
+google.golang.org/protobuf/types/known/timestamppb

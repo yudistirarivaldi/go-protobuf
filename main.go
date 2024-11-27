@@ -18,7 +18,7 @@ func main() {
 	log.SetOutput(new(logWriter))
 
 	// basic.BasicHello()
-	// basic.BasicUser()
+	basic.BasicUser()
 	// basic.WriteToFileSample()
 	// basic.ReadFromFileSample()
 	// basic.WriteToJSONSample()
@@ -39,5 +39,5 @@ func main() {
 	// basic.BasicWriteUserContentV3()
 	// basic.BasicReadUserContentV3()
 	// basic.BasicWriteUserContentV4()
-	basic.BasicReadUserContentV4()
+	// basic.BasicReadUserContentV4()
 }
